@@ -35,4 +35,5 @@ while True:
     
 
     print("Bot : ",result[0]["generated_text"][-1]["content"])
-    
+
+    #done
