@@ -266,20 +266,24 @@ name = "generative-ai"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
+    { name = "huggingface-hub" },
     { name = "langchain" },
     { name = "langchain-huggingface" },
     { name = "langchain-openai" },
     { name = "python-dotenv" },
     { name = "sentence-transformers" },
+    { name = "transformers" },
 ]
 
 [package.metadata]
 requires-dist = [
+    { name = "huggingface-hub", specifier = ">=1.33.0" },
     { name = "langchain", specifier = ">=1.4.3" },
     { name = "langchain-huggingface", specifier = ">=1.2.2" },
     { name = "langchain-openai", specifier = ">=1.6.7" },
     { name = "python-dotenv", specifier = ">=1.2.4" },
     { name = "sentence-transformers", specifier = ">=6.1.0" },
+    { name = "transformers", specifier = ">=5.19.0" },
 ]
 
 [[package]]
