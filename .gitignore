@@ -1,5 +1,6 @@
 models/
 .venv/
 __pycache__/
+chroma-DB/
 *.pyc
 .env
