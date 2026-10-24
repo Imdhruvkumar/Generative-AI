@@ -22,5 +22,14 @@ model = ChatGroq( model="openai/gpt-oss-20b")
 # tool binding to the model
 model_withtool = model.bind_tools([get_text_length])
 # result = model.invoke("hello")
-result = model_withtool.invoke("hello")
-print(result)
+result = model_withtool.invoke("return the number of character in given text : how are you")
+
+
+
+print(result.tool_calls[0])
+print(get_text_length.invoke({
+    'name': 'get_text_length',
+    'args': {'text': 'how are you'},
+    'id': 'fc_06c49773-1a7d-4c7a-ac2f-f67a79c8dc45',
+    'type': 'tool_call'
+}))
